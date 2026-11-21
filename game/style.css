@@ -1,0 +1,187 @@
+/* The Lighthouse Keeper's Desk — page styling. Warm dusk palette, no external assets. */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #1c2333;
+  color: #f2ead8;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+#app {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 12px 20px 20px;
+  text-align: center;
+}
+
+h1 {
+  margin: 4px 0 6px;
+  font-size: 30px;
+  letter-spacing: 1px;
+  color: #ffd98a;
+}
+
+#howto {
+  margin: 0 auto 12px;
+  max-width: 900px;
+  font-size: 15px;
+  line-height: 1.45;
+  color: #d8cdb4;
+}
+
+#hud {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+#counter {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffe9b0;
+}
+
+#timer {
+  font-size: 20px;
+  font-variant-numeric: tabular-nums;
+  color: #bfe3ff;
+}
+
+#progress {
+  width: 220px;
+  height: 14px;
+  border: 2px solid #8a7a5c;
+  border-radius: 8px;
+  background: #2a3247;
+  overflow: hidden;
+}
+
+#progressFill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #e8a33d, #ffd98a);
+  transition: width 0.25s ease;
+}
+
+button {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 15px;
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: 2px solid #8a7a5c;
+  background: #3a4358;
+  color: #ffe9b0;
+  cursor: pointer;
+}
+
+button:hover, button:focus-visible {
+  background: #4a5470;
+  outline: 3px solid #ffd98a;
+  outline-offset: 1px;
+}
+
+#boards {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.board { margin: 0; }
+
+.board figcaption {
+  margin-bottom: 6px;
+  font-size: 15px;
+  color: #d8cdb4;
+  font-style: italic;
+}
+
+canvas {
+  display: block;
+  border: 4px solid #8a7a5c;
+  border-radius: 6px;
+  background: #2a2f45;
+  cursor: crosshair;
+}
+
+canvas:focus-visible {
+  outline: 3px solid #ffd98a;
+  outline-offset: 2px;
+}
+
+canvas.shake {
+  animation: shake 0.35s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-7px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(3px); }
+}
+
+#hint {
+  min-height: 24px;
+  margin: 10px 0 4px;
+  font-size: 16px;
+  color: #ffb3a7;
+}
+
+#foundList {
+  min-height: 22px;
+  margin: 2px auto 4px;
+  max-width: 900px;
+  font-size: 14px;
+  color: #bfe3b0;
+}
+
+#credit {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: #9a917e;
+  font-style: italic;
+}
+
+#winPanel {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 14, 26, 0.72);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+#winPanel[hidden] { display: none; }
+
+#winCard {
+  background: #2a3247;
+  border: 3px solid #ffd98a;
+  border-radius: 14px;
+  padding: 28px 40px;
+  text-align: center;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+}
+
+#winCard h2 {
+  margin: 0 0 8px;
+  color: #ffd98a;
+  font-size: 28px;
+}
+
+#winStars {
+  font-size: 34px;
+  letter-spacing: 6px;
+  margin: 4px 0 10px;
+  color: #ffd23e;
+}
+
+#winCard p { margin: 6px 0; font-size: 17px; }
+
+#winCard button { margin-top: 12px; font-size: 17px; padding: 9px 22px; }
